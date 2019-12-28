@@ -7,7 +7,7 @@
     [WorkType]    INT           NOT NULL,
     [Warranty]    INT           NULL,
     [Price]       DECIMAL (18)  NULL,
-    [CreatedDate] DATETIME      DEFAULT (getdate()) NOT NULL,
+    [CreatedDate] DATETIME      NULL,
     [UpdatedDate] DATETIME      NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );

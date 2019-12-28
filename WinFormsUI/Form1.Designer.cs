@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            mainFormStatusbarText = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dosyaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,18 +80,17 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
+            mainFormStatusbarText});
             this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // mainFormStatusbarText
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(83, 17);
-            this.toolStripStatusLabel1.Text = "Status Bar Text";
+            mainFormStatusbarText.Name = "mainFormStatusbarText";
+            mainFormStatusbarText.Size = new System.Drawing.Size(0, 17);
             // 
             // menuStrip1
             // 
@@ -205,14 +204,14 @@
             // oluşturToolStripMenuItem2
             // 
             this.oluşturToolStripMenuItem2.Name = "oluşturToolStripMenuItem2";
-            this.oluşturToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.oluşturToolStripMenuItem2.Size = new System.Drawing.Size(113, 22);
             this.oluşturToolStripMenuItem2.Text = "Oluştur";
             this.oluşturToolStripMenuItem2.Click += new System.EventHandler(this.OluşturToolStripMenuItem2_Click);
             // 
             // listeleToolStripMenuItem2
             // 
             this.listeleToolStripMenuItem2.Name = "listeleToolStripMenuItem2";
-            this.listeleToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.listeleToolStripMenuItem2.Size = new System.Drawing.Size(113, 22);
             this.listeleToolStripMenuItem2.Text = "Listele";
             this.listeleToolStripMenuItem2.Click += new System.EventHandler(this.listeleToolStripMenuItem2_Click);
             // 
@@ -443,6 +442,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MsoStock";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.statusStrip1.ResumeLayout(false);
@@ -458,8 +458,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem dosyaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
@@ -490,7 +488,6 @@
         private System.Windows.Forms.ToolStripButton tsPersonBtn;
         private System.Windows.Forms.ToolStripButton tsSettingBtn;
         private System.Windows.Forms.ToolStripButton tsAboutMeBtn;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripButton tsStoresBtn;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -500,6 +497,8 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem pencereyiKapatToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        static public System.Windows.Forms.ToolStripStatusLabel mainFormStatusbarText;
     }
 }
 

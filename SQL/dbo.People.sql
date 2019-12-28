@@ -5,7 +5,7 @@
     [PersonID]    VARCHAR (50)  NULL,
     [Email]       VARCHAR (255) NULL,
     [Telephone]   VARCHAR (50)  NULL,
-    [CreatedDate] DATETIME      DEFAULT (getdate()) NOT NULL,
+    [CreatedDate] DATETIME       NOT NULL,
     [UpdatedDate] DATETIME      NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );

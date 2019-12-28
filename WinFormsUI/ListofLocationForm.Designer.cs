@@ -29,38 +29,37 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListofLocationForm));
-            this.advancedDataGridView1 = new Zuby.ADGV.AdvancedDataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
+            this.dgwLocationList = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwLocationList)).BeginInit();
             this.SuspendLayout();
             // 
-            // advancedDataGridView1
+            // dgwLocationList
             // 
-            this.advancedDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.advancedDataGridView1.FilterAndSortEnabled = true;
-            this.advancedDataGridView1.Location = new System.Drawing.Point(13, 159);
-            this.advancedDataGridView1.Name = "advancedDataGridView1";
-            this.advancedDataGridView1.Size = new System.Drawing.Size(775, 279);
-            this.advancedDataGridView1.TabIndex = 0;
+            this.dgwLocationList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwLocationList.Location = new System.Drawing.Point(12, 146);
+            this.dgwLocationList.Name = "dgwLocationList";
+            this.dgwLocationList.Size = new System.Drawing.Size(444, 292);
+            this.dgwLocationList.TabIndex = 0;
             // 
-            // ListofLocation
+            // ListofLocationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.advancedDataGridView1);
+            this.ClientSize = new System.Drawing.Size(468, 450);
+            this.Controls.Add(this.dgwLocationList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ListofLocation";
+            this.Name = "ListofLocationForm";
             this.Text = "Lokasyon Listele";
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwLocationList)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Zuby.ADGV.AdvancedDataGridView advancedDataGridView1;
+        private System.Windows.Forms.DataGridView dgwLocationList;
     }
 }

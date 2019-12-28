@@ -33,11 +33,20 @@ namespace WinFormsUI
                 PersonID = mTbxPersonId.Text,
                 Telephone = mTbxTelephone.Text,
                 Email = tbxMail.Text,
-                //UpdatedDate = DateTime.Now
+                CreatedDate = DateTime.Now,
+                UpdatedDate = DateTime.Now
             };
-
+            Form1.mainFormStatusbarText.Text = "Kişi Kaydedildi...";
             _personService.Add(person);
             this.Close();
+        }
+
+        private void tbxMail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                this.btnSave_Click(sender, e);
+            }
         }
     }
 }

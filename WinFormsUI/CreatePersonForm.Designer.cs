@@ -102,6 +102,7 @@
             this.tbxMail.Name = "tbxMail";
             this.tbxMail.Size = new System.Drawing.Size(144, 20);
             this.tbxMail.TabIndex = 9;
+            this.tbxMail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxMail_KeyDown);
             // 
             // mTbxTelephone
             // 

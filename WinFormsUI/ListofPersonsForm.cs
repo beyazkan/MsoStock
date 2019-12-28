@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Stock.Business.Abstract;
+using Stock.Business.Concrete;
+using Stock.DataAccess.Concrete.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,12 @@ namespace WinFormsUI
 {
     public partial class ListofPersonsForm : Form
     {
+        IPersonService _personService;
         public ListofPersonsForm()
         {
             InitializeComponent();
+            _personService = new PersonManager(new EfPersonDal());
+            dgwPersonList.DataSource = _personService.GetAll();
         }
     }
 }

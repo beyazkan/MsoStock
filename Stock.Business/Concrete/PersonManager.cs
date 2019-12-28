@@ -24,7 +24,7 @@ namespace Stock.Business.Concrete
 
         public List<Person> GetAll()
         {
-            throw new NotImplementedException();
+            return _personDal.GetAll();
         }
     }
 }

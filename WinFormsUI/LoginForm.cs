@@ -63,5 +63,10 @@ namespace WinFormsUI
                 this.btnLogin_Click(sender, e);
             }
         }
+
+        private void btnPswdRecovery_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
