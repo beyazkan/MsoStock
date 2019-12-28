@@ -55,11 +55,13 @@
     <Compile Include="Abstract\ILocationDal.cs" />
     <Compile Include="Abstract\IPersonDal.cs" />
     <Compile Include="Abstract\IProductDal.cs" />
+    <Compile Include="Abstract\IProductTypeDal.cs" />
     <Compile Include="Abstract\IUserDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfEntityRepositoryBase.cs" />
     <Compile Include="Concrete\EntityFramework\EfLocationDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfPersonDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfProductDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfProductTypeDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfUserDal.cs" />
     <Compile Include="Concrete\EntityFramework\StockContext.cs" />
     <Compile Include="Concrete\NHibernate\NhProductDal.cs" />

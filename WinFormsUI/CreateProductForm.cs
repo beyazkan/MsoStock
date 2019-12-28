@@ -16,5 +16,11 @@ namespace WinFormsUI
         {
             InitializeComponent();
         }
+
+        private void btnAddProductType_Click(object sender, EventArgs e)
+        {
+            ProductTypeForm productTypeForm = new ProductTypeForm();
+            productTypeForm.Show();
+        }
     }
 }
