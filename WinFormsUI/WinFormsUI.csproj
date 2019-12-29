@@ -149,6 +149,12 @@
     <Compile Include="PreferencesForm.Designer.cs">
       <DependentUpon>PreferencesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsefulTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsefulTypeForm.Designer.cs">
+      <DependentUpon>UsefulTypeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductTypeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PreferencesForm.resx">
       <DependentUpon>PreferencesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsefulTypeForm.resx">
+      <DependentUpon>UsefulTypeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductTypeForm.resx">
       <DependentUpon>ProductTypeForm.cs</DependentUpon>

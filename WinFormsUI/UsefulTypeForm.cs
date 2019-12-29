@@ -14,37 +14,37 @@ using System.Windows.Forms;
 
 namespace WinFormsUI
 {
-    public partial class ProductTypeForm : Form
+    public partial class UsefulTypeForm : Form
     {
-        IProductTypeService _productTypeService;
+        IUsefulTypeService _UsefulTypeService;
         CreateProductForm _parentForm;
 
-        public ProductTypeForm(CreateProductForm parent)
+        public UsefulTypeForm(CreateProductForm parent)
         {
             InitializeComponent();
-            _productTypeService = new ProductTypeManager(new EfProductTypeDal());
-            this.LoadList();
+            _UsefulTypeService = new UsefulTypeManager(new EfUsefulTypeDal());
             _parentForm = parent;
+            this.LoadList();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            ProductType productType = new ProductType
+            UsefulType usefulType = new UsefulType
             {
                 Name = tbxName.Text,
                 CreatedDate = DateTime.Now,
                 UpdatedDate = DateTime.Now
             };
 
-            _productTypeService.Add(productType);
+            _UsefulTypeService.Add(usefulType);
             this.LoadList();
-            _parentForm.LoadProductTypes();
+            _parentForm.LoadUsefulTypes();
             this.Close();
         }
 
         void LoadList()
         {
-            dgwProductType.DataSource = _productTypeService.GetAll();
+            dgwUsefulType.DataSource = _UsefulTypeService.GetAll();
         }
     }
 }

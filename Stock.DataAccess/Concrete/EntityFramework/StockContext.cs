@@ -15,5 +15,6 @@ namespace Stock.DataAccess.Concrete.EntityFramework
         public DbSet<Person> People { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }
+        public DbSet<UsefulType> usefulTypes { get; set; }
     }
 }

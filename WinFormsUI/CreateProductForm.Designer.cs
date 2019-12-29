@@ -87,6 +87,7 @@
             this.btnAddUsefulType.TabIndex = 16;
             this.btnAddUsefulType.Text = "+";
             this.btnAddUsefulType.UseVisualStyleBackColor = true;
+            this.btnAddUsefulType.Click += new System.EventHandler(this.btnAddUsefulType_Click);
             // 
             // btnAddProductType
             // 
