@@ -17,7 +17,7 @@ namespace Stock.Entities.Concrete
         public int WorkType { get; set; }
         public int Warranty { get; set; }
         public decimal Price { get; set; }
-        public int Count { get; set; }
+        public string Barcode { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
     }

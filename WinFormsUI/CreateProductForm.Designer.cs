@@ -48,12 +48,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tbxBarcode = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDWarranty)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tbxBarcode);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.btnAddUsefulType);
             this.groupBox1.Controls.Add(this.btnAddProductType);
             this.groupBox1.Controls.Add(this.tbxPrice);
@@ -74,7 +78,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(402, 265);
+            this.groupBox1.Size = new System.Drawing.Size(402, 268);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Oluştur";
@@ -84,7 +88,7 @@
             this.btnAddUsefulType.Location = new System.Drawing.Point(369, 130);
             this.btnAddUsefulType.Name = "btnAddUsefulType";
             this.btnAddUsefulType.Size = new System.Drawing.Size(24, 21);
-            this.btnAddUsefulType.TabIndex = 16;
+            this.btnAddUsefulType.TabIndex = 17;
             this.btnAddUsefulType.Text = "+";
             this.btnAddUsefulType.UseVisualStyleBackColor = true;
             this.btnAddUsefulType.Click += new System.EventHandler(this.btnAddUsefulType_Click);
@@ -94,7 +98,7 @@
             this.btnAddProductType.Location = new System.Drawing.Point(369, 102);
             this.btnAddProductType.Name = "btnAddProductType";
             this.btnAddProductType.Size = new System.Drawing.Size(24, 21);
-            this.btnAddProductType.TabIndex = 15;
+            this.btnAddProductType.TabIndex = 16;
             this.btnAddProductType.Text = "+";
             this.btnAddProductType.UseVisualStyleBackColor = true;
             this.btnAddProductType.Click += new System.EventHandler(this.btnAddProductType_Click);
@@ -166,12 +170,13 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(287, 221);
+            this.btnSave.Location = new System.Drawing.Point(287, 236);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 14;
+            this.btnSave.TabIndex = 15;
             this.btnSave.Text = "Oluştur";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label7
             // 
@@ -236,11 +241,27 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ürün Adı :";
             // 
+            // tbxBarcode
+            // 
+            this.tbxBarcode.Location = new System.Drawing.Point(93, 210);
+            this.tbxBarcode.Name = "tbxBarcode";
+            this.tbxBarcode.Size = new System.Drawing.Size(269, 20);
+            this.tbxBarcode.TabIndex = 14;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(14, 213);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Barkot Kodu :";
+            // 
             // CreateProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 288);
+            this.ClientSize = new System.Drawing.Size(429, 290);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -276,5 +297,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddUsefulType;
         private System.Windows.Forms.Button btnAddProductType;
+        private System.Windows.Forms.TextBox tbxBarcode;
+        private System.Windows.Forms.Label label9;
     }
 }

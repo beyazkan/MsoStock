@@ -44,7 +44,7 @@ namespace Stock.DataAccess.Concrete.NHibernate
                 WorkType = 1,
                 Warranty = 3,
                 Price = 3000,
-                Count = 30,
+                Barcode = "1231asda",
                 CreatedDate = DateTime.Now,
                 UpdatedDate = DateTime.Now
                 }

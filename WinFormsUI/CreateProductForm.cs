@@ -1,6 +1,7 @@
 ﻿using Stock.Business.Abstract;
 using Stock.Business.Concrete;
 using Stock.DataAccess.Concrete.EntityFramework;
+using Stock.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,10 +18,12 @@ namespace WinFormsUI
     {
         IProductTypeService _productTypeService;
         IUsefulTypeService _usefulTypeService;
+        IProductService _productService;
 
         public CreateProductForm()
         {
             InitializeComponent();
+            _productService = new ProductManager(new EfProductDal());
             _productTypeService = new ProductTypeManager(new EfProductTypeDal());
             _usefulTypeService = new UsefulTypeManager(new EfUsefulTypeDal());
             LoadProductTypes();
@@ -51,6 +54,27 @@ namespace WinFormsUI
         {
             UsefulTypeForm usefulTypeForm = new UsefulTypeForm(this);
             usefulTypeForm.Show();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Product product = new Product {
+                Name = tbxName.Text,
+                Brand = tbxMarks.Text,
+                Model = tbxModel.Text,
+                Price = Convert.ToDecimal(tbxPrice.Text),
+                Warranty = Convert.ToInt32(nUDWarranty.Value),
+                Type = cbxProductType.SelectedIndex,
+                WorkType = cbxUsefulType.SelectedIndex,
+                Barcode = tbxBarcode.Text,
+                CreatedDate = DateTime.Now,
+                UpdatedDate = DateTime.Now
+
+            };
+
+            _productService.Add(product);
+            Form1.mainFormStatusbarText.Text = "Ürün Kayıt Edildi.";
+            this.Close();
         }
     }
 }
