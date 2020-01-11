@@ -30,41 +30,46 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListofProductsForm));
-            this.adgwProducts = new Zuby.ADGV.AdvancedDataGridView();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.adgwProducts)).BeginInit();
+            this.dgwProducts = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwProducts)).BeginInit();
             this.SuspendLayout();
             // 
-            // adgwProducts
+            // dgwProducts
             // 
-            this.adgwProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.adgwProducts.FilterAndSortEnabled = true;
-            this.adgwProducts.Location = new System.Drawing.Point(13, 164);
-            this.adgwProducts.Name = "adgwProducts";
-            this.adgwProducts.Size = new System.Drawing.Size(775, 274);
-            this.adgwProducts.TabIndex = 0;
+            this.dgwProducts.AllowUserToAddRows = false;
+            this.dgwProducts.AllowUserToDeleteRows = false;
+            this.dgwProducts.AllowUserToOrderColumns = true;
+            this.dgwProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgwProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwProducts.Location = new System.Drawing.Point(12, 12);
+            this.dgwProducts.Name = "dgwProducts";
+            this.dgwProducts.Size = new System.Drawing.Size(776, 426);
+            this.dgwProducts.TabIndex = 0;
             // 
             // ListofProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.adgwProducts);
+            this.Controls.Add(this.dgwProducts);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ListofProductsForm";
             this.Text = "Ürün Listele";
-            ((System.ComponentModel.ISupportInitialize)(this.adgwProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwProducts)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Zuby.ADGV.AdvancedDataGridView adgwProducts;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.DataGridView dgwProducts;
     }
 }

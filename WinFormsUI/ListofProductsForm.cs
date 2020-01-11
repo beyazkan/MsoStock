@@ -25,8 +25,21 @@ namespace WinFormsUI
 
         private void LoadProducts()
         {
-            bindingSource1.DataSource = _productService.GetAll();
-            adgwProducts.DataSource = bindingSource1.DataSource;
+            dgwProducts.DataSource = _productService.GetAll();
+            dgwProducts.Columns[0].HeaderText = "Sıra No";
+            dgwProducts.Columns[0].Visible = false;
+            dgwProducts.Columns[1].HeaderText = "Ürün İsmi";
+            dgwProducts.Columns[2].HeaderText = "Markası";
+            dgwProducts.Columns[3].HeaderText = "Modeli";
+            dgwProducts.Columns[4].HeaderText = "Ürün Tipi";
+            dgwProducts.Columns[5].HeaderText = "Kullanım Tipi";
+            dgwProducts.Columns[6].HeaderText = "Garanti Süresi";
+            dgwProducts.Columns[7].HeaderText = "Fiyatı";
+            dgwProducts.Columns[8].HeaderText = "Barkot Numarası";
+            dgwProducts.Columns[9].HeaderText = "Oluşturulma Tarihi";
+            dgwProducts.Columns[9].Visible = false;
+            dgwProducts.Columns[10].HeaderText = "Güncellenme Tarihi";
+            dgwProducts.Columns[10].Visible = false;
         }
     }
 }
