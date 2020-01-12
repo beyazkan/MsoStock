@@ -73,7 +73,6 @@ namespace WinFormsUI
             };
 
             _productService.Add(product);
-            Form1.mainFormStatusbarText.Text = "Ürün Kayıt Edildi.";
             this.Close();
         }
     }

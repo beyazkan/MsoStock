@@ -36,7 +36,6 @@ namespace WinFormsUI
                 CreatedDate = DateTime.Now,
                 UpdatedDate = DateTime.Now
             };
-            Form1.mainFormStatusbarText.Text = "Kişi Kaydedildi...";
             _personService.Add(person);
             this.Close();
         }

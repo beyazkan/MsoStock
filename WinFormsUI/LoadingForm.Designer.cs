@@ -32,12 +32,16 @@
             this.lblLoadString = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lblPercent = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLoadString
             // 
             this.lblLoadString.AutoSize = true;
-            this.lblLoadString.Location = new System.Drawing.Point(13, 253);
+            this.lblLoadString.BackColor = System.Drawing.Color.Transparent;
+            this.lblLoadString.ForeColor = System.Drawing.Color.Black;
+            this.lblLoadString.Location = new System.Drawing.Point(12, 253);
             this.lblLoadString.Name = "lblLoadString";
             this.lblLoadString.Size = new System.Drawing.Size(50, 13);
             this.lblLoadString.TabIndex = 0;
@@ -45,19 +49,31 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(16, 222);
+            this.progressBar1.Location = new System.Drawing.Point(12, 222);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(467, 23);
+            this.progressBar1.Size = new System.Drawing.Size(471, 23);
             this.progressBar1.TabIndex = 1;
             // 
             // lblPercent
             // 
             this.lblPercent.AutoSize = true;
-            this.lblPercent.Location = new System.Drawing.Point(226, 206);
+            this.lblPercent.BackColor = System.Drawing.Color.Transparent;
+            this.lblPercent.ForeColor = System.Drawing.Color.Black;
+            this.lblPercent.Location = new System.Drawing.Point(446, 254);
             this.lblPercent.Name = "lblPercent";
             this.lblPercent.Size = new System.Drawing.Size(36, 13);
             this.lblPercent.TabIndex = 2;
             this.lblPercent.Text = "0/100";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(471, 204);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // LoadingForm
             // 
@@ -67,16 +83,17 @@
             this.Controls.Add(this.lblPercent);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.lblLoadString);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoadingForm";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Program Yükleniyor";
+            this.Text = "MsoStock";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.LoadingForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,5 +103,6 @@
         public System.Windows.Forms.ProgressBar progressBar1;
         public System.Windows.Forms.Label lblLoadString;
         public System.Windows.Forms.Label lblPercent;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -88,6 +88,7 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnLogin.Location = new System.Drawing.Point(172, 278);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
@@ -98,6 +99,7 @@
             // 
             // btnPswdRecovery
             // 
+            this.btnPswdRecovery.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnPswdRecovery.Location = new System.Drawing.Point(26, 278);
             this.btnPswdRecovery.Name = "btnPswdRecovery";
             this.btnPswdRecovery.Size = new System.Drawing.Size(140, 23);
@@ -110,9 +112,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StatusText});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 332);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 339);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(283, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(284, 22);
             this.statusStrip1.TabIndex = 7;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -125,7 +127,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(283, 354);
+            this.CancelButton = this.btnLogin;
+            this.ClientSize = new System.Drawing.Size(284, 361);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnPswdRecovery);
             this.Controls.Add(this.btnLogin);
@@ -141,8 +144,8 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MsoStock - Giriş Yap";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();

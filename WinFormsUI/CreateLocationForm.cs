@@ -34,7 +34,6 @@ namespace WinFormsUI
 
             _locationService.Add(location);
             this.Close();
-            Form1.mainFormStatusbarText.Text = "Lokasyon Kayıt Edilmiştir.";
         }
     }
 }

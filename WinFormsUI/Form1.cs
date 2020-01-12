@@ -29,69 +29,31 @@ namespace WinFormsUI
         PswdChangeForm _pswdChangeForm;
         SettingsForm _settingsForm;
         PreferencesForm _preferencesForm;
-        int _timer = 500;
 
 
         public Form1()
         {
-            _loadingForm = new LoadingForm();
+            InitializeComponent();
+            _loginForm = new LoginForm();
+
             Thread t = new Thread(new ThreadStart(Startup));
             t.Start();
-            _loginForm = new LoginForm();
-            _loadingForm.PercentUpdate(5, "Program açılıyor...");
-            Thread.Sleep(_timer);
             _createStoreForm = new CreateStoreForm();
-            _loadingForm.PercentUpdate(10, "Depo oluşturma yükleniyor...");
-            Thread.Sleep(_timer);
             _createProductForm = new CreateProductForm();
-            _loadingForm.PercentUpdate(15, "Ürün oluşturma yükleniyor...");
-            Thread.Sleep(_timer);
             _createLocationForm = new CreateLocationForm();
-            _loadingForm.PercentUpdate(20, "Lokasyon oluşturma yükleniyor...");
-            Thread.Sleep(_timer);
             _createPersonForm = new CreatePersonForm();
-            _loadingForm.PercentUpdate(25, "Kişi oluşturma yükleniyor...");
-            Thread.Sleep(_timer);
             _createUserForm = new CreateUserForm();
-            _loadingForm.PercentUpdate(30, "Kullanıcı oluşturma yükleniyor...");
-            Thread.Sleep(_timer);
             _aboutMeForm = new AboutMeForm();
-            _loadingForm.PercentUpdate(35, "Hakkımda yükleniyor...");
-            Thread.Sleep(_timer);
             _listofStoresForm = new ListofStoresForm();
-            _loadingForm.PercentUpdate(40, "Depo listesi yükleniyor...");
-            Thread.Sleep(_timer);
             _listofProductsForm = new ListofProductsForm();
-            _loadingForm.PercentUpdate(45, "Ürün listesi yükleniyor...");
-            Thread.Sleep(_timer);
             _listofLocationForm = new ListofLocationForm();
-            _loadingForm.PercentUpdate(50, "Lokasyon listesi yükleniyor...");
-            Thread.Sleep(_timer);
             _listofPersonsForm = new ListofPersonsForm();
-            _loadingForm.PercentUpdate(55, "Kişi listesi yükleniyor...");
-            Thread.Sleep(_timer);
             _listofUsersForm = new ListofUsersForm();
-            _loadingForm.PercentUpdate(60, "Kullanıcı listesi yükleniyor...");
-            Thread.Sleep(_timer);
             _pswdChangeForm = new PswdChangeForm();
-            _loadingForm.PercentUpdate(65, "Şifre değiştirme yükleniyor...");
-            Thread.Sleep(_timer);
             _settingsForm = new SettingsForm();
-            _loadingForm.PercentUpdate(70, "Ayarlar yükleniyor...");
-            Thread.Sleep(_timer);
             _preferencesForm = new PreferencesForm();
-            _loadingForm.PercentUpdate(75, "Tercihler yükleniyor...");
-            Thread.Sleep(_timer);
-
-            _loadingForm.PercentUpdate(99, "Yükleme tamamlanıyor...");
-            Thread.Sleep(2000);
-            _loadingForm.PercentUpdate(100, "Yükleme tamamlanıyor...");
-            
-            InitializeComponent();
-            if(_loadingForm.progressBar1.Value == 100)
-            {
-                t.Abort();
-            }
+           
+            t.Abort();
         }
 
         private void OluşturToolStripMenuItem_Click(object sender, EventArgs e)
@@ -422,6 +384,7 @@ namespace WinFormsUI
 
         public void Startup()
         {
+            _loadingForm = new LoadingForm();
             Application.Run(_loadingForm);
         }
     }

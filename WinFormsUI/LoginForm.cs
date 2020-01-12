@@ -46,16 +46,6 @@ namespace WinFormsUI
             //StatusText.Text = "Giriş işlemi başarılı";
         }
 
-        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-        }
-
         private void tbxPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter)
@@ -67,6 +57,16 @@ namespace WinFormsUI
         private void btnPswdRecovery_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
         }
     }
 }

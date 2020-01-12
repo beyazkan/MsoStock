@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            mainFormStatusbarText = new System.Windows.Forms.ToolStripStatusLabel();
+            this.mainFormStatusbarText = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dosyaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,6 +71,7 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pencereyiKapatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -80,7 +81,8 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            mainFormStatusbarText});
+            this.mainFormStatusbarText,
+            this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
@@ -89,8 +91,8 @@
             // 
             // mainFormStatusbarText
             // 
-            mainFormStatusbarText.Name = "mainFormStatusbarText";
-            mainFormStatusbarText.Size = new System.Drawing.Size(0, 17);
+            this.mainFormStatusbarText.Name = "mainFormStatusbarText";
+            this.mainFormStatusbarText.Size = new System.Drawing.Size(0, 17);
             // 
             // menuStrip1
             // 
@@ -430,9 +432,14 @@
             this.pencereyiKapatToolStripMenuItem.Text = "Pencereyi Kapat";
             this.pencereyiKapatToolStripMenuItem.Click += new System.EventHandler(this.PencereyiKapatToolStripMenuItem_Click);
             // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
             // Form1
-            //
-            
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -499,7 +506,8 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem pencereyiKapatToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        static public System.Windows.Forms.ToolStripStatusLabel mainFormStatusbarText;
+        public System.Windows.Forms.ToolStripStatusLabel mainFormStatusbarText;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 

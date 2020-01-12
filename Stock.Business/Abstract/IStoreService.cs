@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 
 namespace Stock.Business.Abstract
 {
-    public interface IUserService
+    public interface IStoreService
     {
-        User Get(string Username);
-        Boolean Login(string Username, string Password);
-        List<User> GetAll();
-        void Add(User user);
+        void Add(Store store);
+        List<Store> GetAll();
     }
 }
