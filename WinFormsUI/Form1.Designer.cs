@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.mainFormStatusbarText = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dosyaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,12 +57,6 @@
             this.ayarlarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.hakkındaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tsStoresBtn = new System.Windows.Forms.ToolStripButton();
-            this.tsProductBtn = new System.Windows.Forms.ToolStripButton();
-            this.tsLocationBtn = new System.Windows.Forms.ToolStripButton();
-            this.tsPersonBtn = new System.Windows.Forms.ToolStripButton();
-            this.tsSettingBtn = new System.Windows.Forms.ToolStripButton();
-            this.tsAboutMeBtn = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -71,7 +66,12 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pencereyiKapatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsStoresBtn = new System.Windows.Forms.ToolStripButton();
+            this.tsProductBtn = new System.Windows.Forms.ToolStripButton();
+            this.tsLocationBtn = new System.Windows.Forms.ToolStripButton();
+            this.tsPersonBtn = new System.Windows.Forms.ToolStripButton();
+            this.tsSettingBtn = new System.Windows.Forms.ToolStripButton();
+            this.tsAboutMeBtn = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -93,6 +93,12 @@
             // 
             this.mainFormStatusbarText.Name = "mainFormStatusbarText";
             this.mainFormStatusbarText.Size = new System.Drawing.Size(0, 17);
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // menuStrip1
             // 
@@ -298,73 +304,6 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // tsStoresBtn
-            // 
-            this.tsStoresBtn.Image = global::WinFormsUI.Properties.Resources.warehouse_100px;
-            this.tsStoresBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsStoresBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsStoresBtn.Name = "tsStoresBtn";
-            this.tsStoresBtn.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
-            this.tsStoresBtn.Size = new System.Drawing.Size(52, 70);
-            this.tsStoresBtn.Text = "Depo";
-            this.tsStoresBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tsStoresBtn.Click += new System.EventHandler(this.TsStoresBtn_Click);
-            // 
-            // tsProductBtn
-            // 
-            this.tsProductBtn.Image = global::WinFormsUI.Properties.Resources.product_100px;
-            this.tsProductBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsProductBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsProductBtn.Name = "tsProductBtn";
-            this.tsProductBtn.Size = new System.Drawing.Size(52, 70);
-            this.tsProductBtn.Text = "Ürünler";
-            this.tsProductBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tsProductBtn.Click += new System.EventHandler(this.TsProductBtn_Click);
-            // 
-            // tsLocationBtn
-            // 
-            this.tsLocationBtn.Image = global::WinFormsUI.Properties.Resources.location_100px;
-            this.tsLocationBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsLocationBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsLocationBtn.Name = "tsLocationBtn";
-            this.tsLocationBtn.Size = new System.Drawing.Size(61, 70);
-            this.tsLocationBtn.Text = "Lokasyon";
-            this.tsLocationBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tsLocationBtn.Click += new System.EventHandler(this.TsLocationBtn_Click);
-            // 
-            // tsPersonBtn
-            // 
-            this.tsPersonBtn.Image = global::WinFormsUI.Properties.Resources.team_100px;
-            this.tsPersonBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsPersonBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsPersonBtn.Name = "tsPersonBtn";
-            this.tsPersonBtn.Size = new System.Drawing.Size(52, 70);
-            this.tsPersonBtn.Text = "Kişiler";
-            this.tsPersonBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tsPersonBtn.Click += new System.EventHandler(this.TsPersonBtn_Click);
-            // 
-            // tsSettingBtn
-            // 
-            this.tsSettingBtn.Image = global::WinFormsUI.Properties.Resources.services_100px;
-            this.tsSettingBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsSettingBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsSettingBtn.Name = "tsSettingBtn";
-            this.tsSettingBtn.Size = new System.Drawing.Size(52, 70);
-            this.tsSettingBtn.Text = "Ayarlar";
-            this.tsSettingBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tsSettingBtn.Click += new System.EventHandler(this.TsSettingBtn_Click);
-            // 
-            // tsAboutMeBtn
-            // 
-            this.tsAboutMeBtn.Image = global::WinFormsUI.Properties.Resources.about_100px;
-            this.tsAboutMeBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsAboutMeBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsAboutMeBtn.Name = "tsAboutMeBtn";
-            this.tsAboutMeBtn.Size = new System.Drawing.Size(65, 70);
-            this.tsAboutMeBtn.Text = "Hakkımda";
-            this.tsAboutMeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tsAboutMeBtn.Click += new System.EventHandler(this.TsAboutMeBtn_Click);
-            // 
             // tabControl1
             // 
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -432,11 +371,72 @@
             this.pencereyiKapatToolStripMenuItem.Text = "Pencereyi Kapat";
             this.pencereyiKapatToolStripMenuItem.Click += new System.EventHandler(this.PencereyiKapatToolStripMenuItem_Click);
             // 
-            // toolStripStatusLabel1
+            // tsStoresBtn
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.tsStoresBtn.Image = global::WinFormsUI.Properties.Resources.warehouse_100px;
+            this.tsStoresBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsStoresBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsStoresBtn.Name = "tsStoresBtn";
+            this.tsStoresBtn.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
+            this.tsStoresBtn.Size = new System.Drawing.Size(52, 70);
+            this.tsStoresBtn.Text = "Depo";
+            this.tsStoresBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsStoresBtn.Click += new System.EventHandler(this.TsStoresBtn_Click);
+            // 
+            // tsProductBtn
+            // 
+            this.tsProductBtn.Image = global::WinFormsUI.Properties.Resources.product_100px;
+            this.tsProductBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsProductBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsProductBtn.Name = "tsProductBtn";
+            this.tsProductBtn.Size = new System.Drawing.Size(52, 70);
+            this.tsProductBtn.Text = "Ürünler";
+            this.tsProductBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsProductBtn.Click += new System.EventHandler(this.TsProductBtn_Click);
+            // 
+            // tsLocationBtn
+            // 
+            this.tsLocationBtn.Image = global::WinFormsUI.Properties.Resources.location_100px;
+            this.tsLocationBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsLocationBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsLocationBtn.Name = "tsLocationBtn";
+            this.tsLocationBtn.Size = new System.Drawing.Size(61, 70);
+            this.tsLocationBtn.Text = "Lokasyon";
+            this.tsLocationBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsLocationBtn.Click += new System.EventHandler(this.TsLocationBtn_Click);
+            // 
+            // tsPersonBtn
+            // 
+            this.tsPersonBtn.Image = global::WinFormsUI.Properties.Resources.team_100px;
+            this.tsPersonBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsPersonBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsPersonBtn.Name = "tsPersonBtn";
+            this.tsPersonBtn.Size = new System.Drawing.Size(52, 70);
+            this.tsPersonBtn.Text = "Kişiler";
+            this.tsPersonBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsPersonBtn.Click += new System.EventHandler(this.TsPersonBtn_Click);
+            // 
+            // tsSettingBtn
+            // 
+            this.tsSettingBtn.Image = global::WinFormsUI.Properties.Resources.services_100px;
+            this.tsSettingBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsSettingBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsSettingBtn.Name = "tsSettingBtn";
+            this.tsSettingBtn.Size = new System.Drawing.Size(52, 70);
+            this.tsSettingBtn.Text = "Ayarlar";
+            this.tsSettingBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsSettingBtn.Click += new System.EventHandler(this.TsSettingBtn_Click);
+            // 
+            // tsAboutMeBtn
+            // 
+            this.tsAboutMeBtn.Image = global::WinFormsUI.Properties.Resources.about_100px;
+            this.tsAboutMeBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsAboutMeBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsAboutMeBtn.Name = "tsAboutMeBtn";
+            this.tsAboutMeBtn.Size = new System.Drawing.Size(65, 70);
+            this.tsAboutMeBtn.Text = "Hakkımda";
+            this.tsAboutMeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsAboutMeBtn.Click += new System.EventHandler(this.TsAboutMeBtn_Click);
             // 
             // Form1
             // 
@@ -452,6 +452,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MsoStock";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();

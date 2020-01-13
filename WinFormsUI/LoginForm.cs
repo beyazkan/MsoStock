@@ -16,11 +16,13 @@ namespace WinFormsUI
 {
     public partial class LoginForm : Form
     {
+        Form1 _form1;
         IUserService _userService;
 
-        public LoginForm()
+        public LoginForm(Form1 parentForm)
         {
             InitializeComponent();
+            _form1 = parentForm;
             _userService = new UserManager(new EfUserDal());
         }
 
@@ -35,6 +37,7 @@ namespace WinFormsUI
                 if (_userService.Login(tbxUsername.Text, tbxPassword.Text))
                 {
                     this.Hide();
+                    _form1.Show();
                 }
                 else
                 {
@@ -57,16 +60,17 @@ namespace WinFormsUI
         private void btnPswdRecovery_Click(object sender, EventArgs e)
         {
             this.Hide();
+            _form1.Show();
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
+            Activate();
         }
 
         private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }

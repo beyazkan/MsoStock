@@ -13,8 +13,7 @@ namespace WinFormsUI
 {
     public partial class Form1 : Form
     {
-        LoadingForm _loadingForm;
-        LoginForm _loginForm;
+        LoadObject _loadObject;
         CreateStoreForm _createStoreForm;
         CreateProductForm _createProductForm;
         CreateLocationForm _createLocationForm;
@@ -31,29 +30,29 @@ namespace WinFormsUI
         PreferencesForm _preferencesForm;
 
 
-        public Form1()
+        public Form1(LoadObject loadObject)
         {
             InitializeComponent();
-            _loginForm = new LoginForm();
+            _loadObject = loadObject;
 
-            Thread t = new Thread(new ThreadStart(Startup));
-            t.Start();
-            _createStoreForm = new CreateStoreForm();
-            _createProductForm = new CreateProductForm();
-            _createLocationForm = new CreateLocationForm();
-            _createPersonForm = new CreatePersonForm();
-            _createUserForm = new CreateUserForm();
-            _aboutMeForm = new AboutMeForm();
-            _listofStoresForm = new ListofStoresForm();
-            _listofProductsForm = new ListofProductsForm();
-            _listofLocationForm = new ListofLocationForm();
-            _listofPersonsForm = new ListofPersonsForm();
-            _listofUsersForm = new ListofUsersForm();
-            _pswdChangeForm = new PswdChangeForm();
-            _settingsForm = new SettingsForm();
-            _preferencesForm = new PreferencesForm();
-           
-            t.Abort();
+            //Thread t = new Thread(new ThreadStart(Startup));
+            //t.Start();
+            _createStoreForm = _loadObject._createStoreForm;
+            _createProductForm = _loadObject._createProductForm;
+            _createLocationForm = _loadObject._createLocationForm;
+            _createPersonForm = _loadObject._createPersonForm;
+            _createUserForm = _loadObject._createUserForm;
+            _aboutMeForm = _loadObject._aboutMeForm;
+            _listofStoresForm = _loadObject._listofStoresForm;
+            _listofProductsForm = _loadObject._listofProductsForm;
+            _listofLocationForm = _loadObject._listofLocationForm;
+            _listofPersonsForm = _loadObject._listofPersonsForm;
+            _listofUsersForm = _loadObject._listofUsersForm;
+            _pswdChangeForm = _loadObject._pswdChangeForm;
+            _settingsForm = _loadObject._settingsForm;
+            _preferencesForm = _loadObject._preferencesForm;
+
+            //t.Abort();
         }
 
         private void OluşturToolStripMenuItem_Click(object sender, EventArgs e)
@@ -379,13 +378,18 @@ namespace WinFormsUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            _loginForm.ShowDialog();
+            Activate();
         }
 
-        public void Startup()
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            _loadingForm = new LoadingForm();
-            Application.Run(_loadingForm);
+            Application.Exit();
         }
+
+        //public void Startup()
+        //{
+        //    _loadingForm = new LoadingForm();
+        //    Application.Run(_loadingForm);
+        //}
     }
 }
