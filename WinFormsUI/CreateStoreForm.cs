@@ -16,12 +16,14 @@ namespace WinFormsUI
 {
     public partial class CreateStoreForm : Form
     {
+        //Form1 _form1;
         IStoreService _storeService;
         IPersonService _personService;
 
         public CreateStoreForm()
         {
             InitializeComponent();
+            //_form1 = form1;
             _storeService = new StoreManager(new EfStoreDal());
             _personService = new PersonManager(new EfPersonDal());
             LoadPersonList();
@@ -43,7 +45,7 @@ namespace WinFormsUI
             };
 
             _storeService.Add(store);
-            MessageBox.Show("Depo eklenmiştir.");
+            //_form1.UpdateStatusBarLabel("Depo eklenmiştir.");
             this.Close();
         }
     }

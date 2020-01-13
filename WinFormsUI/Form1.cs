@@ -35,24 +35,21 @@ namespace WinFormsUI
             InitializeComponent();
             _loadObject = loadObject;
 
-            //Thread t = new Thread(new ThreadStart(Startup));
-            //t.Start();
-            _createStoreForm = _loadObject._createStoreForm;
-            _createProductForm = _loadObject._createProductForm;
-            _createLocationForm = _loadObject._createLocationForm;
-            _createPersonForm = _loadObject._createPersonForm;
-            _createUserForm = _loadObject._createUserForm;
-            _aboutMeForm = _loadObject._aboutMeForm;
-            _listofStoresForm = _loadObject._listofStoresForm;
-            _listofProductsForm = _loadObject._listofProductsForm;
-            _listofLocationForm = _loadObject._listofLocationForm;
-            _listofPersonsForm = _loadObject._listofPersonsForm;
-            _listofUsersForm = _loadObject._listofUsersForm;
-            _pswdChangeForm = _loadObject._pswdChangeForm;
-            _settingsForm = _loadObject._settingsForm;
-            _preferencesForm = _loadObject._preferencesForm;
+            _createStoreForm = _loadObject.createStoreForm;
+            _createProductForm = _loadObject.createProductForm;
+            _createLocationForm = _loadObject.createLocationForm;
+            _createPersonForm = _loadObject.createPersonForm;
+            _createUserForm = _loadObject.createUserForm;
+            _aboutMeForm = _loadObject.aboutMeForm;
+            _listofStoresForm = _loadObject.listofStoresForm;
+            _listofProductsForm = _loadObject.listofProductsForm;
+            _listofLocationForm = _loadObject.listofLocationForm;
+            _listofPersonsForm = _loadObject.listofPersonsForm;
+            _listofUsersForm = _loadObject.listofUsersForm;
+            _pswdChangeForm = _loadObject.pswdChangeForm;
+            _settingsForm = _loadObject.settingsForm;
+            _preferencesForm = _loadObject.preferencesForm;
 
-            //t.Abort();
         }
 
         private void OluşturToolStripMenuItem_Click(object sender, EventArgs e)
@@ -379,6 +376,7 @@ namespace WinFormsUI
         private void Form1_Load(object sender, EventArgs e)
         {
             Activate();
+            toolStripStatusLabel1.Text = "";
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -386,10 +384,9 @@ namespace WinFormsUI
             Application.Exit();
         }
 
-        //public void Startup()
-        //{
-        //    _loadingForm = new LoadingForm();
-        //    Application.Run(_loadingForm);
-        //}
+        public void UpdateStatusBarLabel(string text)
+        {
+            toolStripStatusLabel1.Text = text;
+        }
     }
 }

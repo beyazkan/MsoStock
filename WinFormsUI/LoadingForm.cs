@@ -13,12 +13,13 @@ namespace WinFormsUI
 {
     public partial class LoadingForm : Form
     {
-        
+        int _timer;
 
         public LoadingForm()
         {
             CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
+            _timer = 250;
             
         }
 
@@ -32,7 +33,8 @@ namespace WinFormsUI
             lblLoadString.Text = message;
             progressBar1.Value = percent;
             lblPercent.Text = SetPercent(percent);
-            Thread.Sleep(250);
+            if(_timer != 0)
+                Thread.Sleep(_timer);
         }
 
         private string SetPercent(int percent)

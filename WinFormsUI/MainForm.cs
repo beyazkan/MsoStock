@@ -26,9 +26,7 @@ namespace WinFormsUI
             Thread t = new Thread(new ThreadStart(Loading));
             t.Start();
             _loadObjects = new LoadObject(_loadingForm);
-
-
-            _form1 = new Form1(_loadObjects);
+            _form1 = _loadObjects.form1;
             _loginForm = new LoginForm(_form1);
             
             t.Abort();
