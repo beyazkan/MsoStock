@@ -16,7 +16,7 @@ namespace WinFormsUI
         Form1 _form1;
         LoadingForm _loadingForm;
         LoginForm _loginForm;
-        LoadObject _loadObjects;
+        
 
         public MainForm()
         {
@@ -25,8 +25,7 @@ namespace WinFormsUI
             _loadingForm = new LoadingForm();
             Thread t = new Thread(new ThreadStart(Loading));
             t.Start();
-            _loadObjects = new LoadObject(_loadingForm);
-            _form1 = _loadObjects.form1;
+            _form1 = new Form1(_loadingForm);
             _loginForm = new LoginForm(_form1);
             
             t.Abort();

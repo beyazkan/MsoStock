@@ -16,11 +16,13 @@ namespace WinFormsUI
 {
     public partial class CreatePersonForm : Form
     {
+        Form1 _parent;
         IPersonService _personService;
 
-        public CreatePersonForm()
+        public CreatePersonForm(Form1 parent)
         {
             InitializeComponent();
+            _parent = parent;
             _personService = new PersonManager(new EfPersonDal());
         }
 
@@ -37,7 +39,9 @@ namespace WinFormsUI
                 UpdatedDate = DateTime.Now
             };
             _personService.Add(person);
+            _parent.UpdateStatusBarLabel("Kişi oluşturulmuştur...");
             this.Close();
+            
         }
 
         private void tbxMail_KeyDown(object sender, KeyEventArgs e)

@@ -13,7 +13,7 @@ namespace WinFormsUI
 {
     public partial class Form1 : Form
     {
-        LoadObject _loadObject;
+        LoadingForm _loadingForm;
         CreateStoreForm _createStoreForm;
         CreateProductForm _createProductForm;
         CreateLocationForm _createLocationForm;
@@ -30,26 +30,44 @@ namespace WinFormsUI
         PreferencesForm _preferencesForm;
 
 
-        public Form1(LoadObject loadObject)
+        public Form1(LoadingForm loadingForm)
         {
             InitializeComponent();
-            _loadObject = loadObject;
+            _loadingForm = loadingForm;
 
-            _createStoreForm = _loadObject.createStoreForm;
-            _createProductForm = _loadObject.createProductForm;
-            _createLocationForm = _loadObject.createLocationForm;
-            _createPersonForm = _loadObject.createPersonForm;
-            _createUserForm = _loadObject.createUserForm;
-            _aboutMeForm = _loadObject.aboutMeForm;
-            _listofStoresForm = _loadObject.listofStoresForm;
-            _listofProductsForm = _loadObject.listofProductsForm;
-            _listofLocationForm = _loadObject.listofLocationForm;
-            _listofPersonsForm = _loadObject.listofPersonsForm;
-            _listofUsersForm = _loadObject.listofUsersForm;
-            _pswdChangeForm = _loadObject.pswdChangeForm;
-            _settingsForm = _loadObject.settingsForm;
-            _preferencesForm = _loadObject.preferencesForm;
-
+            _loadingForm = loadingForm;
+            _loadingForm.LoadingUpdate(1, "Program Başlatılıyor...");
+            _loadingForm.LoadingUpdate(5, "Program Hazırlanıyor...");
+            _createStoreForm = new CreateStoreForm(this);
+            _loadingForm.LoadingUpdate(10, "Depo oluşturma yükleniyor...");
+            _createProductForm = new CreateProductForm(this);
+            _loadingForm.LoadingUpdate(15, "Ürün oluşturma yükleniyor...");
+            _createLocationForm = new CreateLocationForm(this);
+            _loadingForm.LoadingUpdate(20, "Lokasyon oluşturma yükleniyor...");
+            _createPersonForm = new CreatePersonForm(this);
+            _loadingForm.LoadingUpdate(25, "Kişi oluşturma yükleniyor...");
+            _createUserForm = new CreateUserForm(this);
+            _loadingForm.LoadingUpdate(30, "Kullanıcı oluşturma yükleniyor...");
+            _aboutMeForm = new AboutMeForm();
+            _loadingForm.LoadingUpdate(35, "Hakkımda yükleniyor...");
+            _listofStoresForm = new ListofStoresForm();
+            _loadingForm.LoadingUpdate(40, "Depo listesi yükleniyor...");
+            _listofProductsForm = new ListofProductsForm();
+            _loadingForm.LoadingUpdate(45, "Ürün listesi yükleniyor...");
+            _listofLocationForm = new ListofLocationForm();
+            _loadingForm.LoadingUpdate(50, "Lokasyon listesi yükleniyor...");
+            _listofPersonsForm = new ListofPersonsForm();
+            _loadingForm.LoadingUpdate(55, "Kişi listesi yükleniyor...");
+            _listofUsersForm = new ListofUsersForm();
+            _loadingForm.LoadingUpdate(60, "Kullanıcı listesi yükleniyor...");
+            _pswdChangeForm = new PswdChangeForm();
+            _loadingForm.LoadingUpdate(65, "Şifre değiştirme yükleniyor...");
+            _settingsForm = new SettingsForm();
+            _loadingForm.LoadingUpdate(70, "Ayarlar yükleniyor...");
+            _preferencesForm = new PreferencesForm();
+            _loadingForm.LoadingUpdate(75, "Tercihler yükleniyor...");
+            _loadingForm.LoadingUpdate(99, "Yükleme tamamlanıyor...");
+            _loadingForm.LoadingUpdate(100, "Yükleme tamamlanıyor...");
         }
 
         private void OluşturToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,7 +78,7 @@ namespace WinFormsUI
             }
             catch (ObjectDisposedException)
             {
-                _createStoreForm = new CreateStoreForm();
+                _createStoreForm = new CreateStoreForm(this);
                 _createStoreForm.Show();
             }
         }
@@ -73,7 +91,7 @@ namespace WinFormsUI
             }
             catch (ObjectDisposedException)
             {
-                _createProductForm = new CreateProductForm();
+                _createProductForm = new CreateProductForm(this);
                 _createProductForm.Show();
             }
         }
@@ -86,7 +104,7 @@ namespace WinFormsUI
             }
             catch (ObjectDisposedException)
             {
-                _createLocationForm = new CreateLocationForm();
+                _createLocationForm = new CreateLocationForm(this);
                 _createLocationForm.Show();
             }
         }
@@ -99,7 +117,7 @@ namespace WinFormsUI
             }
             catch (ObjectDisposedException)
             {
-                _createPersonForm = new CreatePersonForm();
+                _createPersonForm = new CreatePersonForm(this);
                 _createPersonForm.Show();
             }
         }
@@ -117,7 +135,7 @@ namespace WinFormsUI
             }
             catch (ObjectDisposedException)
             {
-                _createUserForm = new CreateUserForm();
+                _createUserForm = new CreateUserForm(this);
                 _createUserForm.Show();
             }
         }

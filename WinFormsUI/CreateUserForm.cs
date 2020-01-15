@@ -16,12 +16,14 @@ namespace WinFormsUI
 {
     public partial class CreateUserForm : Form
     {
+        Form1 _parent;
         IUserService _userService;
         IPersonService _personService;
 
-        public CreateUserForm()
+        public CreateUserForm(Form1 parent)
         {
             InitializeComponent();
+            _parent = parent;
             _userService = new UserManager(new EfUserDal());
             _personService = new PersonManager(new EfPersonDal());
             LoadPerson();
@@ -62,7 +64,7 @@ namespace WinFormsUI
                 };
 
                 _userService.Add(user);
-                MessageBox.Show("Kullanıcı başarılı bir şekilde oluşturulmuştur.");
+                _parent.UpdateStatusBarLabel("Kullanıcı başarılı bir şekilde oluşturulmuştur.");
                 this.Close();
                     
             }           

@@ -16,10 +16,12 @@ namespace WinFormsUI
 {
     public partial class CreateLocationForm : Form
     {
+        Form1 _parent;
         ILocationService _locationService;
-        public CreateLocationForm()
+        public CreateLocationForm(Form1 parent)
         {
             InitializeComponent();
+            _parent = parent;
             _locationService = new LocationManager(new EfLocationDal());
         }
 
@@ -33,7 +35,9 @@ namespace WinFormsUI
             };
 
             _locationService.Add(location);
+            _parent.UpdateStatusBarLabel("Lokasyon Eklenmiştir.");
             this.Close();
+            
         }
     }
 }

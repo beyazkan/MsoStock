@@ -16,13 +16,15 @@ namespace WinFormsUI
 {
     public partial class CreateProductForm : Form
     {
+        Form1 _form1;
         IProductTypeService _productTypeService;
         IUsefulTypeService _usefulTypeService;
         IProductService _productService;
 
-        public CreateProductForm()
+        public CreateProductForm(Form1 form1)
         {
             InitializeComponent();
+            _form1 = form1;
             _productService = new ProductManager(new EfProductDal());
             _productTypeService = new ProductTypeManager(new EfProductTypeDal());
             _usefulTypeService = new UsefulTypeManager(new EfUsefulTypeDal());
@@ -69,11 +71,12 @@ namespace WinFormsUI
                 Barcode = tbxBarcode.Text,
                 CreatedDate = DateTime.Now,
                 UpdatedDate = DateTime.Now
-
             };
 
             _productService.Add(product);
+            _form1.UpdateStatusBarLabel("Ürün eklenmiştir.");
             this.Close();
+            
         }
     }
 }
