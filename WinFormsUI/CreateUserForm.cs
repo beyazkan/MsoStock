@@ -31,8 +31,8 @@ namespace WinFormsUI
 
         private void LoadPerson()
         {
-            cbxUser.DataSource = _personService.GetAll();
-            cbxUser.DisplayMember = "Name";
+            cbxUser.DataSource = _personService.GetAllFullName();
+            cbxUser.DisplayMember = "FullName";
             cbxUser.ValueMember = "Id";
         }
 

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Stock.Business.Abstract;
+using Stock.Business.Concrete;
+using Stock.DataAccess.Concrete.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,16 @@ namespace WinFormsUI
 {
     public partial class ListofStoresForm : Form
     {
+        IStoreService _storeService;
         public ListofStoresForm()
         {
             InitializeComponent();
+            _storeService = new StoreManager(new EfStoreDal());
+        }
+
+        private void ListofStoresForm_Load(object sender, EventArgs e)
+        {
+            dgwListofStores.DataSource = _storeService.GetAll();
         }
     }
 }

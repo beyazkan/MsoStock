@@ -29,38 +29,38 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListofStoresForm));
-            this.advancedDataGridView1 = new Zuby.ADGV.AdvancedDataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
+            this.dgwListofStores = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwListofStores)).BeginInit();
             this.SuspendLayout();
             // 
-            // advancedDataGridView1
+            // dgwListofStores
             // 
-            this.advancedDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.advancedDataGridView1.FilterAndSortEnabled = true;
-            this.advancedDataGridView1.Location = new System.Drawing.Point(12, 165);
-            this.advancedDataGridView1.Name = "advancedDataGridView1";
-            this.advancedDataGridView1.Size = new System.Drawing.Size(362, 273);
-            this.advancedDataGridView1.TabIndex = 0;
+            this.dgwListofStores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwListofStores.Location = new System.Drawing.Point(13, 142);
+            this.dgwListofStores.Name = "dgwListofStores";
+            this.dgwListofStores.Size = new System.Drawing.Size(362, 296);
+            this.dgwListofStores.TabIndex = 0;
             // 
             // ListofStoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(387, 450);
-            this.Controls.Add(this.advancedDataGridView1);
+            this.Controls.Add(this.dgwListofStores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ListofStoresForm";
             this.Text = "Depo Listesi";
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ListofStoresForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgwListofStores)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Zuby.ADGV.AdvancedDataGridView advancedDataGridView1;
+        private System.Windows.Forms.DataGridView dgwListofStores;
     }
 }

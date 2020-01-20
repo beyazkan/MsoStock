@@ -26,5 +26,12 @@ namespace Stock.Business.Concrete
         {
             return _personDal.GetAll();
         }
+
+        public Object GetAllFullName()
+        {
+            var query = from item in GetAll()
+                        select new { Id = item.Id, FullName = item.Name + " " + item.LastName };
+            return query.ToList();
+        }
     }
 }

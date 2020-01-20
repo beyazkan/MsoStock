@@ -7,7 +7,7 @@
     [WorkType]    INT          NOT NULL,
     [Warranty]    INT          NULL,
     [Price]       DECIMAL (18) NULL,
-	[Barcode]     VARCHAR (50) NULL,
+    [Barcode]     VARCHAR (50) NULL,
     [CreatedDate] DATETIME     NULL,
     [UpdatedDate] DATETIME     NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)

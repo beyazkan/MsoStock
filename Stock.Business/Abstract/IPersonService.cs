@@ -11,5 +11,6 @@ namespace Stock.Business.Abstract
     {
         List<Person> GetAll();
         void Add(Person person);
+        Object GetAllFullName();
     }
 }
